@@ -65,11 +65,12 @@ const Contact = () => {
     <div
       className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
     >
-<div className="relative top-[-380px] sm:top-[-0px] md:top-[-400px]"> {/* wrapper controls margin */}
-  <motion.div
-    variants={slideIn("left", "tween", 0.2, 1)}
-    className='flex-[0.75]  p-2 rounded-2xl'
-  >
+<motion.div
+  variants={slideIn("left", "tween", 0.2, 1)}
+  className='flex-[0.75] p-2 rounded-2xl z-10 pointer-events-auto relative top-[-380px] sm:top-0 md:top-[-400px]'
+>
+  {/* Form contents */}
+
 
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
@@ -121,7 +122,7 @@ const Contact = () => {
           </button>
         </form>
   </motion.div>
-</div>
+
 
       <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}

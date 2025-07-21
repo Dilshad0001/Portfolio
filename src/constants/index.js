@@ -138,7 +138,7 @@ live_link: "https://main.dlqfsrk4ru0i8.amplifyapp.com/"
   {
     name: "Job Journey",
     description:
-      "Job Journey is a personal job tracking platform using microservices architecture. It allows users to log applications, track statuses, and manage their job search. The auth service supports OTP login, Google/GitHub OAuth, and the project is fully Dockerized for easy deployment. Real-time chat and more features are in development.",
+      "Job Journey is a personal job-tracking platform built with microservices architecture. It lets users log applications, track statuses, and manage their job search. The auth service supports OTP login, Google/GitHub OAuth, and the project is fully Dockerized for easy deployment. Real-time chat and more features are in development.",
     tags: [
       {
         name: "Django",
@@ -176,7 +176,7 @@ live_link: "https://main.dlqfsrk4ru0i8.amplifyapp.com/"
   {
     name: "Fitmyjob",
     description:
-      "FitMyJob is a live, full-featured job portal platform that effectively connects job seekers with employers through a seamless and efficient interface. As part of the development team, I actively contribute to the running product by fixing bugs, adding new features, and continuously improving overall performance to enhance user experience.",
+      "FitMyJob is a live, full-featured job portal platform that effectively connects job seekers with potential employers through a seamless and efficient interface. As part of the development team, I actively contribute to the running product by fixing bugs, adding new features, and continuously improving the overall performance to enhance user experience..",
     tags: [
       {
         name: "Django",
