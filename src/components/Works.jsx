@@ -62,7 +62,11 @@ const ProjectCard = ({
             {/* Frontend GitHub */}
             <div
               onClick={() => window.open(source_code_links.frontend, "_blank")}
-              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer absolute left-[410px] top-[0px] lg:-left-[50px] lg:top-[13px] "
+              // className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer absolute left-[410px] top-[0px] lg:-left-[50px] lg:top-[13px] md:left-[90px]  sm:left-[10px]"
+className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer absolute
+sm:left-[10px] md:left-[90px] lg:-left-[50px]
+left-[200px] top-[10px] lg:top-[13px]"
+
               title="Frontend Code"
             >
               <img
@@ -75,7 +79,10 @@ const ProjectCard = ({
             {/* Backend GitHub */}
             <div
               onClick={() => window.open(source_code_links.backend, "_blank")}
-              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer absolute left-[340px] top-[0px] lg:left-[1px] lg:top-[13px] "
+              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer absolute
+sm:left-[10px] md:left-[90px] lg:-left-[50px]
+left-[260px] top-[10px] lg:top-[13px]"
+              // className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer absolute left-[340px] top-[0px] lg:left-[1px] lg:top-[13px] md:left-[150px] "
               title="Backend Code"
             >
               <img
@@ -89,7 +96,10 @@ const ProjectCard = ({
             {live_link && (
               <div
                 onClick={() => window.open(live_link, "_blank")}
-                className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer absolute left-[270px] top-[0px] lg:-left-[100px] lg:top-[13px]"
+            className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer absolute
+sm:left-[10px] md:left-[90px] lg:-left-[50px]
+left-[140px] top-[10px] lg:top-[13px]"
+                // className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer absolute left-[270px] top-[0px] lg:-left-[100px] lg:top-[13px] md:left-[30px]"
                 title="Live Demo"
               >
                 <svg
