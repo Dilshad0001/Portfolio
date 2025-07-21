@@ -4,15 +4,12 @@ import {
   mobile,
   web,
   css,
-  project2,
-  project3,
   git,
   html,
   javascript,
   reactjs,
   tailwind,
   redis,
-  project1,
   
 } from '../assets'
 import { SiDocker, SiPostgresql, SiDjango } from "react-icons/si";
@@ -24,10 +21,11 @@ import sql from "../assets/tech/Sql Server.png"
 import Docker from "../assets/tech/docker.png"
 import microservice from "../assets/tech/Microservice.png"
 import Aws from "../assets/tech/aws.svg"
+import eduflow from "../assets/tech/eduflow.png"
+import fitmyjob from "../assets/tech/fitmyjob.png"
+import velvora from "../assets/tech/velvora.png"
+import jobjourney from "../assets/tech/jobjourney.png"
 
-import anasPng from "../assets/anas.jpg";
-import sahadPng from "../assets/sahad.jpg";
-import nishajPng from "../assets/nishaj.jpg";
 
 import BridgeonLogo from "../assets/company/bridgeonLogo.jpg";
 
@@ -84,48 +82,6 @@ const technologies = [
 ];
 
 
-// const technologies = [
-//   {
-//     name: "HTML 5",
-//     icon: html,
-//   },
-//   {
-//     name: "CSS 3",
-//     icon: css,
-//   },
-//   {
-//     name: "JavaScript",
-//     icon: javascript,
-//   },
-//   {
-//     name: "React JS",
-//     icon: reactjs,
-//   },
-
-//   {
-//     name: "Redis",
-//     icon: redis,
-//   },
-  
-//   {
-//     name: "Tailwind CSS",
-//     icon: tailwind,
-//   },
-//   {
-//     name: "git",
-//     icon: git,
-//   },
-//     { name: "Python", icon: <FaPython /> },
-//   { name: "Django", icon: <SiDjango /> },
-//   { name: "Django REST Framework", icon: <TbApi /> },
-//   { name: "PostgreSQL", icon: <SiPostgresql /> },
-
-//     { name: "Docker", icon: <FaDocker /> },
-//   { name: "AWS EC2", icon: <SiAmazonaws /> },
-//   { name: "Microservices", icon: <SiMicrodotblog /> }, 
-
-
-// ];
 
 const experiences = [
   {
@@ -144,39 +100,14 @@ const experiences = [
   },
 ];
 
-const testimonials = [
-  {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Navaf proved me wrong.",
-    name: "Anas",
-    designation: "Team Lead",
-    company: "Libay",
-    image: anasPng,
-  },
-  {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Navaf does.",
-    name: "Nishaj",
-    designation: "Full stack Developer",
-    company: "Ontoborn Technologies LLC",
-    image: nishajPng,
-  },
-  {
-    testimonial:
-      "Navaf is a highly skilled developer with a strong understanding of both frontend and backend technologies. His ability to solve complex challenges is impressive.",
-    name: "Sahad",
-    designation: "Team Lead",
-    company: "VorreiX",
-    image: sahadPng,
-  },
-];
+
 
 
 const projects = [
   {
     name: "Eduflow (LMS)",
     description:
-      "Eduflow is a role-based Learning Management System (LMS) designed for efficient course management and student engagement. The platform features two roles: Admin (who manages content and acts as instructor) and Student. Admins can create courses, upload educational videos, and assign tasks, while students can enroll, view content, and submit assignments. Built with a Django + Django REST Framework backend and a React.js frontend, Eduflow includes secure JWT authentication and a scalable architecture.",
+      "Eduflow is a role-based Learning Management System (LMS) for efficient course management and student engagement. Admins can create courses, upload videos, and assign tasks, while students can enroll, view content, and submit assignments. Eduflow features secure JWT authentication and a scalable architecture.",
     tags: [
       {
         name: "Django",
@@ -190,58 +121,111 @@ const projects = [
         name: "react vite",
         color: "pink-text-gradient",
       },
+      {
+        name: "Aws",
+        color: "blue-text-gradient",
+      },
 
     ],
-    image: project1,
-    source_code_link: "https://github.com/Dilshad0001/backend-eduflow-django",
-    source_code_link: "https://github.com/Dilshad0001/backend-eduflow-django",
+    image: eduflow,
+    source_code_links: {
+  frontend: "https://github.com/Dilshad0001/frontend-eduflow-react",
+  backend: "https://github.com/Dilshad0001/backend-eduflow-django",
+},
+live_link: "https://main.dlqfsrk4ru0i8.amplifyapp.com/"
+
   },
   {
-    name: "TikTok Clone",
+    name: "Job Journey",
     description:
-      "TikTok Clone is a social media platform designed for seamless video sharing and discovery. Users can upload, view, and interact with short videos. Featuring real-time interactions, personalized feeds, and a smooth user experience, it's the go-to space for entertainment and creativity.",
+      "Job Journey is a personal job tracking platform using microservices architecture. It allows users to log applications, track statuses, and manage their job search. The auth service supports OTP login, Google/GitHub OAuth, and the project is fully Dockerized for easy deployment. Real-time chat and more features are in development.",
     tags: [
       {
-        name: "react",
+        name: "Django",
         color: "blue-text-gradient",
       },
       {
-        name: "Socket io",
+        name: "React",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Docker",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Microservice",
         color: "green-text-gradient",
       },
       {
-        name: "Typescript",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: project2,
-    source_code_link: "https://github.com/Navaf-U/tiktok-clone",
-  },
-  {
-    name: "StepPrime-Ecommerce",
-    description:
-      "Step Prime is your go-to online store for premium shoes across various styles and brands. Whether you're looking for casual wear, formal shoes, or sports footwear, Step Prime offers a seamless shopping experience, ensuring quality, comfort, and style—all in one place.",
-    tags: [
-      {
-        name: "react",
+        name: "Oauth",
         color: "blue-text-gradient",
       },
       {
-        name: "express",
+        name: "celery",
+        color: "green-text-gradient",
+      },
+    ],
+    image: jobjourney,
+    source_code_links: {
+  frontend: "https://github.com/Dilshad0001/jobtrack_project_frontend",
+  backend: "https://github.com/Dilshad0001/jobtrack_project_backend",
+},
+
+
+  },
+  {
+    name: "Fitmyjob",
+    description:
+      "FitMyJob is a live, full-featured job portal platform that effectively connects job seekers with employers through a seamless and efficient interface. As part of the development team, I actively contribute to the running product by fixing bugs, adding new features, and continuously improving overall performance to enhance user experience.",
+    tags: [
+      {
+        name: "Django",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Psql",
         color: "white-text-gradient",
       },
       {
-        name: "node",
+        name: "DRF",
+        color: "green-text-gradient",
+      },
+
+    ],
+    image: fitmyjob,
+    source_code_links: {
+  frontend: "#",
+  backend: "#",
+},
+
+
+
+  },
+    {
+    name: "Velvora",
+    description:
+      "Velvora is an e-commerce platform focused on simplifying the online purchase of clothing items. It features secure JWT-based authentication, Razorpay integration for payments, cart and order system. An admin panel allows efficient product and category management used React.js, Tailwind CSS, Django, DRF, SQL, Razorpay, Postman, GitHub.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Django",
         color: "green-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "DRF",
         color: "green-text-gradient",
       },
     ],
-    image: project3,
-    source_code_link: "https://github.com/Navaf-U/e-commerce-webapp",
+    image: velvora,
+  source_code_links: {
+  frontend: "https://github.com/Dilshad0001/vilvora_react",
+  backend: "https://github.com/Dilshad0001/mykart",
+}
+
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { services, technologies, experiences, projects };

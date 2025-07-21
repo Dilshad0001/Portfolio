@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef } from "react";
 import { Tilt } from "react-tilt";
 import { gsap } from "gsap";
@@ -17,29 +18,26 @@ const ProjectCard = ({
   description,
   tags,
   image,
-  source_code_link,
+  source_code_links,
+  live_link,
 }) => {
   const cardRef = useRef(null);
 
   useEffect(() => {
     const el = cardRef.current;
 
-    // ScrollTrigger for animating project cards with stagger
     gsap.fromTo(
       el,
-      {
-        opacity: 0,
-        y: 100, // Start off-screen
-      },
+      { opacity: 0, y: 100 },
       {
         opacity: 1,
         y: 0,
         scrollTrigger: {
           trigger: el,
-          start: "top bottom",  // Trigger when the top of the element hits the bottom of the viewport
-          end: "top center",    // End when the top reaches the center of the viewport
-          scrub: true,          // Smoothly sync scroll and animation
-          markers: false,       // Set to `true` to see debug markers
+          start: "top bottom",
+          end: "top center",
+          scrub: true,
+          markers: false,
         },
       }
     );
@@ -48,12 +46,8 @@ const ProjectCard = ({
   return (
     <div ref={cardRef}>
       <Tilt
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
+        options={{ max: 45, scale: 1, speed: 450 }}
+        className="bg-tertiary p-5 rounded-2xl w-full lg:w-[280px]"
       >
         <div className="relative w-full h-[230px]">
           <img
@@ -62,25 +56,68 @@ const ProjectCard = ({
             className="w-full h-full object-cover object-left rounded-2xl"
           />
 
-          <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
+          {/* Icons */}
+          <div className="absolute flex flex-col gap-2 justify-start items-start m-3 card-img_hover
+                        top-[160px] sm:left-[100px] lg:left-[180px]">
+            {/* Frontend GitHub */}
             <div
-              onClick={() => window.open(source_code_link, "_blank")}
-              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+              onClick={() => window.open(source_code_links.frontend, "_blank")}
+              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer absolute left-[470px] top-[0px] lg:-left-[50px] lg:top-[13px] "
+              title="Frontend Code"
             >
               <img
                 src={github}
-                alt="source code"
+                alt="frontend code"
                 className="w-1/2 h-1/2 object-contain"
               />
             </div>
+
+            {/* Backend GitHub */}
+            <div
+              onClick={() => window.open(source_code_links.backend, "_blank")}
+              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer absolute left-[410px] top-[0px] lg:left-[1px] lg:top-[13px] "
+              title="Backend Code"
+            >
+              <img
+                src={github}
+                alt="backend code"
+                className="w-1/2 h-1/2 object-contain"
+              />
+            </div>
+
+            {/* Live Demo */}
+            {live_link && (
+              <div
+                onClick={() => window.open(live_link, "_blank")}
+                className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer absolute left-[340px] top-[0px] lg:-left-[100px] lg:top-[13px]"
+                title="Live Demo"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-1/2 h-1/2 text-white"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M14 3h7v7m0 0L10 21l-7-7L17 3z"
+                  />
+                </svg>
+              </div>
+            )}
           </div>
         </div>
 
+        {/* Content */}
         <div className="mt-5">
           <h3 className="text-white font-bold text-[24px]">{name}</h3>
           <p className="mt-2 text-secondary text-[14px]">{description}</p>
         </div>
 
+        {/* Tags */}
         <div className="mt-4 flex flex-wrap gap-2">
           {tags.map((tag) => (
             <p
@@ -98,23 +135,19 @@ const ProjectCard = ({
 
 const Works = () => {
   useEffect(() => {
-    // Stagger effect for project cards
     gsap.fromTo(
-      ".project-card", // Select all project cards
-      {
-        opacity: 0,
-        y: 100,
-      },
+      ".project-card",
+      { opacity: 0, y: 100 },
       {
         opacity: 1,
         y: 0,
-        stagger: 0.1, // Stagger delay of 0.3 seconds between each card
+        stagger: 0.1,
         scrollTrigger: {
           trigger: ".works-container",
-          start: "top bottom",  // Trigger when the top of the container reaches the bottom
+          start: "top bottom",
           end: "top center",
           scrub: true,
-          markers: false, // Set to true to see debug markers
+          markers: false,
         },
       }
     );
@@ -133,7 +166,7 @@ const Works = () => {
         </p>
       </div>
 
-      <div className="works-container mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-5">
+      <div className="works-container mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-items-center gap-5">
         {projects.map((project, index) => (
           <div key={`project-${index}`} className="project-card">
             <ProjectCard index={index} {...project} />
