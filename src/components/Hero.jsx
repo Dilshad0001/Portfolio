@@ -2,11 +2,13 @@
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import myImage from "../assets/myimg.png";
+import ResumeButton from "./ResumeButton";
 
 const Hero = () => {
   return (
     <section className="relative w-full h-screen mx-auto overflow-hidden">
       {/* Text and Line */}
+      <ResumeButton/>
       <div
         className={`absolute inset-0 top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
       >
