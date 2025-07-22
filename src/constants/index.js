@@ -168,7 +168,7 @@ live_link: "https://main.dlqfsrk4ru0i8.amplifyapp.com/"
     image: jobjourney,
     source_code_links: {
   frontend: "https://github.com/Dilshad0001/jobtrack_project_frontend",
-  backend: "https://github.com/Dilshad0001/jobtrack_project_backend",
+  backend: "https://github.com/Dilshad0001/jobjourney_backend",
 },
 
 
