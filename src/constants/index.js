@@ -138,7 +138,7 @@ live_link: "https://main.dlqfsrk4ru0i8.amplifyapp.com/"
   {
     name: "Job Journey",
     description:
-      "Job Journey is a personal job-tracking platform built with microservices architecture. It lets users log applications, track statuses, and manage their job search. The auth service supports OTP login, Google/GitHub OAuth, and the project is fully Dockerized for easy deployment. Real-time chat and more features are in development.",
+      "Job Journey is a personal job-tracking platform built with microservices. It lets users log applications, track statuses, and manage their job search. The auth service supports OTP login, Google/GitHub OAuth, and the project is Dockerized for easy deployment. A real-time chat system and job tracking modules are fully implemented.",
     tags: [
       {
         name: "Django",
@@ -163,6 +163,18 @@ live_link: "https://main.dlqfsrk4ru0i8.amplifyapp.com/"
       {
         name: "celery",
         color: "green-text-gradient",
+      },
+            {
+        name: "Django Channels",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "WebSockets",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "AWS",
+        color: "blue-text-gradient",
       },
     ],
     image: jobjourney,
